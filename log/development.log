@@ -1,0 +1,461 @@
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[35m (35.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3909872118067099380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBots (20170721150747)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.8ms)[0m  [1m[35mCREATE TABLE "bots" ("id" serial primary key, "messages" character varying, "approved" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (31.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170721150747"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-07-21 15:12:58 UTC], ["updated_at", 2017-07-21 15:12:58 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3909872118067099380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from raise_in_transactional_callbacks= at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/gems/activerecord-5.0.0/lib/active_record/transactions.rb:283)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[35m (12.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3909872118067099380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (13.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCompanies (20170726215945)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3909872118067099380)[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3909872118067099380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCompanies (20170726220023)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.8ms)[0m  [1m[35mCREATE TABLE "companies" ("id" serial primary key, "handle" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (8.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170726220023"]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3909872118067099380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'companies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3909872118067099380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddHashtagsToBot (20170726233632)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.5ms)[0m  [1m[35mALTER TABLE "bots" ADD "hashtag" text[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170726233632"]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3909872118067099380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'companies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[36mActiveRecord::SchemaMigration Load (24.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (17.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (40.4ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "Have you considered putting pockets in your dresses?"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "We want pockets in our dresses and skirts!!"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "luv ur clothes but POCKETS in dresses & skirts would be AMAZING."], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "Skirts & Dresses + Pockets = Literal Heaven"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "listen...... pockets. in. dresses. please."], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "ok but pockets tho. like, dresses. or skirts. or both. or just, usable pockets."], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "0/10 stars for having jeans with unusably small pockets"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "haven't u seen the memes? pockets r in."], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "pls.... i just want...... pockets in my clothes...."], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "P O C K E T S"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "i c them in ur men's clothes, pls.... we want pockets 2"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "pockets = easy millenial win, should be obvious"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "help us justify buying ur clothes -> put pockets in them"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "all i need in this life of sin, is pockets big enough to put my hands in"], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", ""], ["created_at", 2017-07-28 19:33:37 UTC], ["updated_at", 2017-07-28 19:33:37 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "Have you considered putting pockets in your dresses?"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "We want pockets in our dresses and skirts!!"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "luv ur clothes but POCKETS in dresses & skirts would be AMAZING."], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "Skirts & Dresses + Pockets = Literal Heaven"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "listen...... pockets. in. dresses. please."], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "ok but pockets tho. like, dresses. or skirts. or both. or just, usable pockets."], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "0/10 stars for having jeans with unusably small pockets"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "haven't u seen the memes? pockets r in."], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "pls.... i just want...... pockets in my clothes...."], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "P O C K E T S"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "i c them in ur men's clothes, pls.... we want pockets 2"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "pockets = easy millenial win, should be obvious"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "help us justify buying ur clothes -> put pockets in them"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", "all i need in this life of sin, is pockets big enough to put my hands in"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bots" ("messages", "created_at", "updated_at", "hashtag") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["messages", ""], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC], ["hashtag", "#giveuspockets"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Kohls"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Target"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "OldNavy"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "katespadeny"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "BananaRepublic"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "toryburch"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "jcrew"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "CharlotteRusse"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "hmusa"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "shopbop"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "madewell"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Anthropologie"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "reformationx"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "MissguidedUS"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "ASOS_Us"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "NastyGal"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "FreePeople"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Missguided"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "PacSun"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "NETAPORTER"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "americanapparel"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "UrbanOutfitters"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "ASOS"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Bershka"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Mango"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "ZARA"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Topshop"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "Forever21"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("handle", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["handle", "hm"], ["created_at", 2017-07-28 19:34:24 UTC], ["updated_at", 2017-07-28 19:34:24 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBot Load (17.3ms)[0m  [1m[34mSELECT "bots".* FROM "bots"[0m
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (17.6ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (0.3ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (1.0ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (0.2ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "companies"."id" FROM "companies"[0m
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (0.3ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "companies"."id" FROM "companies"[0m
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (0.2ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "companies"."id" FROM "companies"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "bots"."id" FROM "bots"[0m
+  [1m[36mBot Load (0.2ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" WHERE "bots"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/mary-katherinemckenzie/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3909872118067099380);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTypeToBot (20170728194933)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.4ms)[0m  [1m[35mALTER TABLE "bots" ADD "type" character varying[0m
+  [1m[35mSQL (18.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170728194933"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3909872118067099380)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bots'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'companies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mBot Load (2.1ms)[0m  [1m[34mSELECT "bots".* FROM "bots"[0m
+  [1m[36mBot Load (0.3ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" ORDER BY "bots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBot Load (0.6ms)[0m  [1m[34mSELECT "bots".* FROM "bots"[0m
+  [1m[36mBot Load (0.4ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" ORDER BY "bots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBot Load (0.5ms)[0m  [1m[34mSELECT "bots".* FROM "bots"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 3]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 4]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 5]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 7]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 12]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 13]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 14]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 15]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 16]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 17]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 19]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 20]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 21]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 22]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 23]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 24]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 25]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 26]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 27]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 28]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 29]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bots" SET "type" = $1, "updated_at" = $2 WHERE "bots"."id" = $3[0m  [["type", "ask"], ["updated_at", 2017-07-28 19:57:22 UTC], ["id", 30]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBot Load (1.8ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" ORDER BY "bots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBot Load (0.5ms)[0m  [1m[34mSELECT  "bots".* FROM "bots" ORDER BY "bots"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBot Load (0.4ms)[0m  [1m[34mSELECT "bots".* FROM "bots"[0m
